@@ -4,7 +4,6 @@
 
 ![avatar](流程圖.png)
 
-
 使用 [service workers API] (https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) 來發送推播通知
 [registration.pushManager.subscribe()](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe)
 
@@ -21,4 +20,3 @@ worker.js: client.js 所使用的 worker.js, 這是 service worker 的程式邏�
 
 
 
-- https://codus.me/blog/webpush.html
