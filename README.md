@@ -4,10 +4,11 @@
 
 ![avatar](流程圖.png)
 
-使用 [service workers API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) 來發送推播通知
-[registration.pushManager.subscribe()](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe)
-
 ## 大部分解
+
+使用 [service workers API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) 來發送推播通知
+
+[registration.pushManager.subscribe()](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe)
 
 web-push的模組 類似: [pywebpush](https://github.com/web-push-libs/pywebpush) 可以省掉 PubNub 之類的中間溝通,直接推送訊息
 
