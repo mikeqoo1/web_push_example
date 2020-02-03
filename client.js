@@ -1,5 +1,5 @@
 //這裡的 public key 要改用自己產生的
-const publicVapidKey = 'BKuAWnJKXgsR_WgbMfQF3WJjmI9B1EiF49vv9H0sNCQKtZV5AGLPFwvNWU1J5JwzQeXXayB3lS3shZQrOO4jVsk';
+const publicVapidKey = 'BIa5LyyvebounXa4Yydflf72M1c-hdDyY5GQEwuaYSwRICt8wRtxLPr6Rm4Ppi7GxktY6Y1NhSs-5uogwlott6g';
 
 if ('serviceWorker' in navigator) {
   console.log('Registering service worker');

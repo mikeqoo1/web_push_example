@@ -5,6 +5,7 @@ self.addEventListener('push', ev => {
   console.log('Got push', data);
   self.registration.showNotification(data.title, {
     body: 'Hello, 灰色老鼠ㄝ~~~',
-    icon: 'https://img.icons8.com/emoji/48/000000/mouse-body-emoji.png'
+    icon: 'icon.png',
+    badge: 'icon.png'
   });
 });
