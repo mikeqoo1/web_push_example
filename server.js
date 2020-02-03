@@ -15,15 +15,15 @@ app.use(require('body-parser').json());
 //web中的 JavaScript 將會發送一個 body 中包含 PushSubscription 的請求
 //為了用 webpush.sendNotification() 發送推送通知 需要獲取 PushSubscription 的物件
 app.post('/subscribe', (req, res) => {
-  const subscription = req.body;
-  res.status(201).json({});
-  const payload = JSON.stringify({ title: 'test' });
+    const subscription = req.body;
+    res.status(201).json({});
+    const payload = JSON.stringify({ title: 'TEST(title)' });
 
-  console.log(subscription);
+    console.log(subscription);
 
-  webpush.sendNotification(subscription, payload).catch(error => {
-    console.error(error.stack);
-  });
+    webpush.sendNotification(subscription, payload).catch(error => {
+        console.error(error.stack);
+    });
 });
 
 app.use(require('express-static')('./'));
