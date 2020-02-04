@@ -2,25 +2,23 @@
 const publicVapidKey = 'BIa5LyyvebounXa4Yydflf72M1c-hdDyY5GQEwuaYSwRICt8wRtxLPr6Rm4Ppi7GxktY6Y1NhSs-5uogwlott6g';
 
 if ('serviceWorker' in navigator) {
-    console.log('註冊 service worker');
-    console.log('Notification permission default status:', Notification.permission);
     run().catch(error => console.error(error));
 }
 
 async function run() {
+    console.log('註冊 service worker');
     const registration = await navigator.serviceWorker.register('/worker.js', { scope: '/' }); //初始化service worker
-    console.log('Registered service worker');
+    console.log('Notification permission default status:', Notification.permission);
 
-    console.log('Registering push');
+    console.log('註冊 push 功能');
     console.log('Notification permission 同意後 status:', Notification.permission);
     const subscription = await registration.pushManager.
         subscribe({
             userVisibleOnly: true,
             applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
         });
-    console.log('Registered push');
 
-    console.log('Sending push');
+    console.log('發送訂閱請求');
     await fetch('/subscribe', {
         method: 'POST',
         body: JSON.stringify(subscription),
@@ -28,7 +26,6 @@ async function run() {
             'content-type': 'application/json'
         }
     });
-    console.log('Sent push');
 }
 
 //解key使用
